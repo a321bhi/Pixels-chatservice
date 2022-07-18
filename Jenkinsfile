@@ -23,8 +23,8 @@ pipeline {
     stage('Deploy') {
       steps {
         bat 'docker build -t pixels-chatservice .'
-        bat 'docker tag pixels-chatservice abhi2104/pixels-chatservice'
-        bat 'docker push abhi2104/pixels-chatservice'
+        bat 'docker tag pixels-chatservice abhi2104/pixels-chatservice:latest'
+        bat 'docker push abhi2104/pixels-chatservice:latest'
       }
     }
 
@@ -36,7 +36,7 @@ pipeline {
 
       }
       steps {
-        sh 'docker pull abhi2104/pixels-chatservice'
+        sh 'docker pull abhi2104/pixels-chatservice:latest'
       }
     }
 
