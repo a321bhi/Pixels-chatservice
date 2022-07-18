@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import com.pixels.chatservice.message.Message;
 import com.pixels.chatservice.service.MessageServiceImpl;
 
+@CrossOrigin("http://localhost:3000")
 @Controller
-@CrossOrigin(origins = "http://localhost:3000")
 public class ChatController {
 
 	@Autowired

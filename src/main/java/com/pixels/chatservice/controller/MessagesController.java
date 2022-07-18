@@ -14,8 +14,8 @@ import com.pixels.chatservice.message.Message;
 import com.pixels.chatservice.service.MessageServiceImpl;
 
 @RestController
-@RequestMapping("chat")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin("http://localhost:3000")
+@RequestMapping("/chat")
 public class MessagesController {
 
 	@Autowired

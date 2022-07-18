@@ -13,11 +13,11 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer{
 	  @Override
 	  public void configureMessageBroker(MessageBrokerRegistry config) {
 	    config.enableSimpleBroker("/topic");
-	    config.setApplicationDestinationPrefixes("/app");
+//	    config.setApplicationDestinationPrefixes("/chat");
 	  }
 
 	  @Override
 	  public void registerStompEndpoints(StompEndpointRegistry registry) {
-	    registry.addEndpoint("/chat/gs-guide-websocket").setAllowedOrigins("http://localhost:3000").withSockJS();
+	    registry.addEndpoint("/chat/websocket").setAllowedOrigins("http://localhost:3000").withSockJS();
 	  }
 }
