@@ -20,7 +20,7 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+    stage('Push to Hub') {
       steps {
         bat 'docker build -t pixels-chatservice .'
         bat 'docker tag pixels-chatservice abhi2104/pixels-chatservice:latest'
@@ -28,10 +28,10 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Deploy') {
       agent {
         node {
-          label 'jenkinsagent'
+          label 'Pixels_EC2'
         }
 
       }
