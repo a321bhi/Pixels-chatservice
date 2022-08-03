@@ -31,7 +31,7 @@ pipeline {
     stage('Deploy') {
       agent {
         node {
-          label 'Pixels_EC2'
+          label 'jenkinsagent'
         }
 
       }
